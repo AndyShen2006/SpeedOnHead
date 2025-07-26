@@ -5,3 +5,16 @@ api-version: '1.21'
 authors: [ AndyShen2006 ]
 description: Render player's speed on his head
 website: spdonhd.sizha.top
+commands:
+  start_record:
+    description: "修改记录速度"
+    usage: "/start_record <speed>"
+  stop_record:
+    description: "修改记录速度"
+    usage: "/stop_record <speed>"
+  record_speed:
+    description: "修改记录速度"
+    usage: "/record_speed <speed>"
+  notice_speed:
+    description: "修改警告速度"
+    usage: "/notice_speed <speed>"

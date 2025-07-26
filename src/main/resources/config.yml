@@ -1,0 +1,6 @@
+# 插件版本（不知道这是什么，不要随意修改）
+version: 1.0-SNAPSHOT
+# 记录速度
+recordSpeed: 25
+# 警告速度
+noticeSpeed: 30

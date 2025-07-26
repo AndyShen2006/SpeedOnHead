@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock
 import java.util.logging.Level
 
 object CSVManager {
-    private val plugin = Bukkit.getPluginManager().getPlugin("Icesumo") as Icesumo
+    private val plugin = Bukkit.getPluginManager().getPlugin("SpeedOnHead") as SpeedOnHead
     private val dataDir = File(plugin.dataFolder, "results")
     private val lock = ReentrantLock()
 
@@ -23,7 +23,7 @@ object CSVManager {
             try {
                 Bukkit.getScheduler().runTaskAsynchronously(plugin, Runnable {
                     FileWriter(resultFile, true).use { writer ->
-                        writer.appendLine("PlayerUUID,PlayerName,Result,FailTime")
+                        writer.appendLine("PlayerUUID,PlayerName,Time,Velocity")
                     }
                 })
             } catch (_: Exception) {
@@ -36,13 +36,13 @@ object CSVManager {
 
     }
 
-    fun appendResult(resultFile: File, uuid: String, username: String, result: Boolean, failTime: Long) {
+    fun appendResult(resultFile: File, uuid: String, username: String, time: String, velocity: Double) {
         try {
             lock.lock()
             try {
                 Bukkit.getScheduler().runTaskAsynchronously(plugin, Runnable {
                     FileWriter(resultFile, true).use { writer ->
-                        writer.appendLine("${uuid},${username},${if (result) "SUCCESS" else "FAIL"},${failTime}")
+                        writer.appendLine("${uuid},${username},${time},${velocity}")
                     }
                 })
             } catch (_: Exception) {
