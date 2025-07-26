@@ -1,0 +1,14 @@
+package top.sizha.speedOnHead
+
+import org.bukkit.plugin.java.JavaPlugin
+
+class SpeedOnHead : JavaPlugin() {
+
+    override fun onEnable() {
+        // Plugin startup logic
+    }
+
+    override fun onDisable() {
+        // Plugin shutdown logic
+    }
+}

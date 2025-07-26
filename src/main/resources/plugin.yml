@@ -1,0 +1,7 @@
+name: SpeedOnHead
+version: '1.0-SNAPSHOT'
+main: top.sizha.speedOnHead.SpeedOnHead
+api-version: '1.21'
+authors: [ AndyShen2006 ]
+description: Render player's speed on his head
+website: spdonhd.sizha.top
